@@ -1,6 +1,7 @@
 /*
-    Lucas Frais
-    c0778441
+    Student Name: Lucas Frais
+    File Name: script.js
+    Date: Novvember 24, 2025
 */
 
 //Global variables

@@ -1,42 +1,47 @@
 /*
-    Lucas Frais
-    c0778441
+Author: Lucas Frais
+Date: November 24, 2025
+File Name: styles.css
 */
 
 /* CSS Reset */
-body, header, nav, main, footer, h1, div, img, ul {
+body, header, nav, main, footer, h1, div, img, ul, figure, figcaption, section, article, aside, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
 }
 
-/* Style rules for all viewports */
+/* Style rules for body and images */
 body {
-    background-color: #F0EAD6;
-    text-align: center;
+	background-color: #000;
 }
 
 img, video {
-    max-width: 100%;
-    display: block;
-    align-items: center;
-    text-align: center;
+	max-width: 100%;
+	display: block;
 }
 
+/* Style rule for box sizing applies to all elements */
+* {
+	box-sizing: border-box;
+}
+
+/* Style rules for mobile viewport */
+
+/* Style rules for header */
 header {
-    background-color: #F0EAD6;
-    border-radius: 8px;
-    text-shadow: 8px 8px 10px #808080;
-    text-align: center;
+	top: 0;
+	background-color: #000;
+	height: 190px;
 }
 
 header, img {
-    margin: 0 auto;
+	margin: 0 auto;
 }
 
 /* Style rules for hamburger menu */
 .mobile-nav a {
-	color: #000;
+	color: #fff;
 	font-family: 'Francois One', sans-serif;
 	text-align: center;
 	font-size: 2em;
@@ -61,21 +66,167 @@ header, img {
 	display: none;
 }
 
+/* Style rules for main content */
+main {
+	background-color: #fff;
+	padding: 2%;
+	font-size: 1.15em;
+	font-family: "Roboto Slab", serif;
+}
+
+video {
+	margin: 0 auto 4%;
+}
+
+.mobile h3 {
+	text-shadow: 5px 5px 8px #ccc;
+}
+
+article {
+	padding: 2%;
+}
+
+article h3 {
+	text-align: center;
+}
+
+article img {
+	margin: 0 auto;
+}
+
+article ul {
+	margin-left: 10%;
+}
+
+article:nth-of-type(2) {
+	background-color: rgba(204, 204, 204, 0.3);
+}
+
+.tel-link {
+	background-color: #404040;
+	padding: 2%;
+	margin: 0 auto;
+	width: 80%;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.tel-link a {
+	color: #fff;
+	text-decoration: none;
+	font-size: 1.5em;
+	display: block;
+}
+
+.hours {
+	margin-left: 10%;
+}
+
+.action {
+	font-size: 1.35em;
+	color: #666600;
+	font-weight: bold;
+	text-shadow: 5px 5px 8px #ccc;
+}
+
+.frame {
+	position: relative;
+	max-width: 450px;
+	margin: 2% auto;
+}
+
+.pic-text {
+	position: absolute;
+	bottom: 0;
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	width: 100%;
+	padding: 20px;
+	text-align: center;
+	font-family: Verdana, Arial, sans-serif;
+	font-size: 1.5em;
+	font-weight: bold;
+}
+
+#weights, #cardio, #training {
+	margin: 0 2%;
+}
+
+.round {
+	border-radius: 8px;
+}
+
+.external-link {
+	color: #666600;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+#contact {
+	text-align: center;
+}
+
+#contact .contact-email-link {
+	color: #666600;
+	text-decoration: none;
+}
+
+.map {
+	border: 2px solid #000;
+	width: 95%;
+	height: 50%;
+}
+
+#form {
+	margin-top: 2%;
+	background-color: #f2f2f2;
+	padding: 2%;
+}
+
+#form h2 {
+	text-align: center;
+}
+
+/* Style rules for form elements */
+fieldset, input, select, textarea {
+	margin-bottom: 2%;
+}
+
+fieldset legend {
+	font-weight: bold;
+	font-size: 1.25em;
+}
+
+label {
+	display: block;
+	padding-top: 3%;
+}
+
+form #submit {
+	margin: 0 auto;
+	border: none;
+	display: block;
+	padding: 2%;
+	background-color: #b3b3b3;
+	font-size: 1em;
+	border-radius: 10px;
+}
+
 /* Style rules for footer content */
 footer p {
 	font-size: 0.75em;
 	text-align: center;
-	color: #000;
+	color: #fff;
 	padding: 0 1em;
 }
 
 footer p a {
-	color: #000;
+	color: #fff;
 	text-decoration: none;
 }
 
 /* Media Query for Tablet Viewport */
-@media screen and (min-width: 768px), print {
+@media screen and (min-width: 630px), print {
 
 	/* Tablet Viewport: Show tablet-desktop class, hide mobile class */
 	.tablet-desktop {
@@ -103,10 +254,10 @@ footer p a {
 	}
 
 	nav li {
-		font-size: 1.2em;
+		font-size: 1.5em;
 		font-family: "Francois One", sans-serif;
 		display: inline-block;
-		border-right: 1px solid #000;
+		border-right: 1px solid #fff;
 	}
 
 	nav li:last-child {
@@ -116,7 +267,7 @@ footer p a {
 	nav li a {
 		padding: 0.1em 0.75em;
 		display: block;
-		color: #000;
+		color: #fff;
 		text-decoration: none;
 	}
 
@@ -246,23 +397,24 @@ footer p a {
 }
 
 /* Media Query for Desktop Viewport */
-@media screen and (min-width: 1024px), print {
+@media screen and (min-width: 1020px), print {
 
 	/* Desktop Viewport: Style rule for header */
 	header {
 		width: 25%;
-		float: center;
+		float: left;
 		padding-bottom: 0;
 	}
 
 	/* Desktop Viewport: Style rules for nav area */
 	nav {
-		width: auto;
-		margin: auto 0;
+		float: right;
+		width: 70%;
+		margin: 4em 1em 0 0;
 	}
 
 	nav ul {
-		text-align: center;
+		text-align: right;
 	}
 
 	nav li {
@@ -342,14 +494,14 @@ footer p a {
 /* Media Query for Large Desktop Viewports */
 @media screen and (min-width: 1921px) {
 
-    #container {
-        width: 1920px;
-        margin: 0 auto;
-    }
+	#container {
+		width: 1920px;
+		margin: 0 auto;
+	}
 
-    table {
-        width: 80%;
-    }
+	table {
+		width: 80%;
+	}
 
 }
 
